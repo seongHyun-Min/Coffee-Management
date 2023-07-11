@@ -13,6 +13,7 @@ import static com.example.coffeemanagement.utils.ProductUtils.*;
 
 
 @RequiredArgsConstructor
+@Repository
 public class ProductJdbcRepository implements ProductRepository {
 
     private final NamedParameterJdbcTemplate jdbcTemplate;
