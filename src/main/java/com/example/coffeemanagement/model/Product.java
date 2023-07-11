@@ -10,7 +10,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Getter
 
-public class product {
+public class Product {
     private final UUID productId;
     private String productName;
 
@@ -23,7 +23,7 @@ public class product {
 
     private LocalDateTime updateAt;
 
-    public product(UUID productId, String productName, Category category, long price) {
+    public Product(UUID productId, String productName, Category category, long price) {
         this.productId = productId;
         this.productName = productName;
         this.category = category;
