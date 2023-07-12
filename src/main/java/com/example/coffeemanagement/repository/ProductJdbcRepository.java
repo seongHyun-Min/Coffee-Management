@@ -21,6 +21,7 @@ public class ProductJdbcRepository implements ProductRepository {
     @Override
     public List<Product> findAll() {
         return jdbcTemplate.query("select * from products", productRowMapper);
+
     }
 
     @Override
@@ -34,6 +35,7 @@ public class ProductJdbcRepository implements ProductRepository {
         }
         return product;
     }
+
 
     @Override
     public Product update(Product product) {
