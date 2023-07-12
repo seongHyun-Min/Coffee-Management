@@ -19,8 +19,8 @@ public class ProductUtils {
         Category category = Category.valueOf(resultSet.getString("category"));
         long price = resultSet.getLong("price");
         String description = resultSet.getString("description");
-        LocalDateTime createdAt = toLocalDateTime(resultSet.getTimestamp("createdAt"));
-        LocalDateTime updatedAt = toLocalDateTime(resultSet.getTimestamp("updatedAt"));
+        LocalDateTime createdAt = toLocalDateTime(resultSet.getTimestamp("created_at"));
+        LocalDateTime updatedAt = toLocalDateTime(resultSet.getTimestamp("updated_at"));
 
         return new Product(productId, productName, category, price, description, createdAt, updatedAt);
     };
@@ -46,5 +46,6 @@ public class ProductUtils {
         paramMap.put("updatedAt", product.getUpdatedAt());
         return paramMap;
     }
+
 
 }
